@@ -22,6 +22,12 @@
   transition: opacity 0.3s;
 }
 
-.filters .search:hover {
+.filters button:hover {
   opacity: 0.9;
+}
+
+.locations,
+.amenities {
+  height: 100%;
+  width: 25%;
 }
