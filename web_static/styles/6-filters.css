@@ -1,12 +1,15 @@
+/* styles/6-filters.css */
+
 .filters {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: white;
   height: 70px;
   width: 100%;
   border: 1px solid #dddddd;
   border-radius: 4px;
+  padding-right: 30px;
 }
 
 .filters .locations,
@@ -16,10 +19,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 
 .filters .locations {
   border-right: 1px solid #dddddd;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
 }
 
 .filters h3 {
@@ -48,4 +55,38 @@
 
 .filters button:hover {
   opacity: 1;
+}
+
+/* Contextual dropdown styles */
+.popover {
+  display: none;
+  position: absolute;
+  background-color: #fafafa;
+  color: #333;
+  width: 100%;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  padding: 10px;
+  top: 100%;
+  left: 0;
+}
+
+.locations:hover .popover,
+.amenities:hover .popover {
+  display: block;
+}
+
+/* Additional styles for the location dropdown */
+.popover ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.popover ul li {
+  padding: 5px 0;
+}
+
+.popover ul ul {
+  margin-left: 10px;
 }
